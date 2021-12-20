@@ -1,0 +1,11 @@
+1. Mutex, condition variable
+
+Mutex는 lock을 건 쓰레드만이 임계 영역을 나가면서 unlock할 수 있다.
+condition variable을 사용하여 특정 조건이 성립할 때까지 wait하면서 일시적으로 unlock상태로 만들 수 있다.
+
+2. Semaphore
+
+세마포어의 카운트에 따라 lock이 실행된다.
+(wait의 경우 semaphore를 사용하고 있기 때문에 -1
+signal(post)의 경우 semaphore를 반납하는 것이므로 +1)
+즉, lock을 걸지 않은 쓰레드도 signal을 사용해 unlock할  수 있다.
